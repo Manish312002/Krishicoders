@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Configure CORS from environment variable `CORS_ORIGIN` (comma-separated list)
 const allowedOrigins = [
+    'https://krishicoders-1.vercel.app',
     process.env.CORS_ORIGIN, // Add your Vercel frontend URL in environment variables
     'http://localhost:3000',
     'http://localhost:5173', // Your deployed frontend
@@ -77,3 +78,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
